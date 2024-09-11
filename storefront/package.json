@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "dev": "next dev -p 8000",
-    "build": "npm run wait && next build",
+    "build": "yarn run wait && next build",
     "start": "next start -p ${PORT:-3000}",
     "start:dev": "next start",
     "lint": "next lint",
