@@ -35,6 +35,8 @@
     "@tabler/icons-react": "^3.16.0",
     "algoliasearch": "^4.20.0",
     "axios": "^1.6.7",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.5.4",
     "lodash": "^4.17.21",
     "next": "^14.0.0",
     "pg": "^8.11.3",
@@ -45,6 +47,7 @@
     "react-instantsearch-hooks-web": "^6.29.0",
     "react-intersection-observer": "^9.3.4",
     "server-only": "^0.0.1",
+    "tailwind-merge": "^2.5.2",
     "tailwindcss-radix": "^2.8.0",
     "webpack": "^5"
   },
