@@ -52,6 +52,14 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg, var(--tw-gradient-stops))',
+        'blue-to-purple': 'linear-gradient(to right, #1e3a8a, #a855f7)',
+        'green-to-yellow': 'linear-gradient(to right, #10b981, #facc15)',
+        'custom-gradient': 'radial-gradient(circle at top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0))',
+
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
