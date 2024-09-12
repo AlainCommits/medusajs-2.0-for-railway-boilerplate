@@ -29,7 +29,7 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
               <div className="relative flex h-full">
                 <Popover.Button
                   data-testid="nav-menu-button"
-                  className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base"
+                  className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base gradient-text-1  font-bold"
                 >
                   Menu
                 </Popover.Button>
@@ -45,10 +45,10 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                 leaveFrom="opacity-100 backdrop-blur-2xl"
                 leaveTo="opacity-0"
               >
-                <Popover.Panel className="flex flex-col absolute w-full pr-4 sm:pr-0 sm:w-1/3 2xl:w-1/4 sm:min-w-min h-[calc(100vh-1rem)] z-30 inset-x-0 text-sm text-ui-fg-on-color m-2 backdrop-blur-2xl ">
+                <Popover.Panel className="flex flex-col absolute w-full pr-4 sm:pr-0 sm:w-1/3 2xl:w-1/4 sm:min-w-min h-[calc(100vh-1rem)] z-30 inset-x-0 text-sm gradient-text-1 font-bold m-2 backdrop-blur-2xl ">
                   <div
                     data-testid="nav-menu-popup"
-                    className="flex flex-col h-full bg-gradient-conic from-purple-800 primary-foreground to-secondary rounded-rounded justify-between p-6  rounded-2xl"
+                    className="flex flex-col h-full bg-gradient-linear from-purple-800 primary-foreground to-secondary rounded-rounded justify-between p-6  rounded-2xl"
                   >
                     <div className="flex justify-end" id="xmark">
                       <button data-testid="close-menu-button" onClick={close}>

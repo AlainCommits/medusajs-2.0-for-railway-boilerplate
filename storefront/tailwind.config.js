@@ -24,12 +24,12 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "hsl(var(--primary) / <alpha-value>)",
+          foreground: "hsl(var(--primary-foreground) / <alpha-value>)",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "hsl(var(--secondary) / <alpha-value>)",
+          foreground: "hsl(var(--secondary-foreground) / <alpha-value>)",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -40,8 +40,8 @@ module.exports = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "hsl(var(--accent) / <alpha-value>)",
+          foreground: "hsl(var(--accent-foreground) / <alpha-value>)",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -53,8 +53,8 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg, var(--tw-gradient-stops))',
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops) / <alpha-value>)',
+        'gradient-conic': 'conic-gradient(from 180deg, var(--tw-gradient-stops) / <alpha-value>)',
         'blue-to-purple': 'linear-gradient(to right, #1e3a8a, #a855f7)',
         'green-to-yellow': 'linear-gradient(to right, #10b981, #facc15)',
         'custom-gradient': 'radial-gradient(circle at top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0))',

@@ -50,13 +50,14 @@ export default async function Nav() {
               </LocalizedClientLink>
             </div>
             <Suspense
+              className="gradient-text-2"
               fallback={
                 <LocalizedClientLink
-                  className="hover:text-ui-fg-base flex gap-2 text-accent-foreground"
+                  className="hover:text-ui-fg-base flex gap-2 gradient-text-1"
                   href="/cart"
                   data-testid="nav-cart-link"
                 >
-                  Cart (0)
+                   Cart (0)
                 </LocalizedClientLink>
               }
             >
