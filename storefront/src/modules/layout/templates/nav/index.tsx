@@ -50,7 +50,7 @@ export default async function Nav() {
               </LocalizedClientLink>
             </div>
             <Suspense
-              className="gradient-text-2"
+              
               fallback={
                 <LocalizedClientLink
                   className="hover:text-ui-fg-base flex gap-2 gradient-text-1"
