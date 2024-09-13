@@ -40,7 +40,7 @@ module.exports = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent) / <alpha-value>)",
+          DEFAULT: "hsl(var(--accent)/<alpha-value>)",
           foreground: "hsl(var(--accent-foreground) / <alpha-value>)",
         },
         popover: {
@@ -57,7 +57,8 @@ module.exports = {
         'gradient-conic': 'conic-gradient(from 180deg, var(--tw-gradient-stops) / <alpha-value>)',
         'blue-to-purple': 'linear-gradient(to right, #1e3a8a, #a855f7)',
         'green-to-yellow': 'linear-gradient(to right, #10b981, #facc15)',
-        'custom-gradient': 'radial-gradient(circle at top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0))',
+        'shiny-1': 'radial-gradient(circle at top, rgba(0, 255, 255, 0.5), rgba(255, 255, 255, 0))',
+        'shiny-2': 'radial-gradient(circle at top, rgba(0, 255, 150, 0.5), rgba(255, 255, 255, 0))',
 
       },
       borderRadius: {

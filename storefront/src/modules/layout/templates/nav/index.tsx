@@ -5,6 +5,8 @@ import { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import { PiShoppingCartSimpleBold } from "react-icons/pi";
+
 
 export default async function Nav() {
   const regions = await listRegions().then((regions: StoreRegion[]) => regions)
@@ -49,20 +51,23 @@ export default async function Nav() {
                 Account
               </LocalizedClientLink>
             </div>
+            <span className="gradient-text-1"></span>
             <Suspense
               
               fallback={
                 <LocalizedClientLink
-                  className="hover:text-ui-fg-base flex gap-2 gradient-text-1"
+                  className="hover:text-ui-fg-base flex gap-2 !gradient-text-1"
                   href="/cart"
                   data-testid="nav-cart-link"
                 >
-                   Cart (0)
+                   <PiShoppingCartSimpleBold className="gradient-text-2"/>
+                   (0)
                 </LocalizedClientLink>
               }
             >
-              <CartButton />
+              <CartButton/>
             </Suspense>
+            
           </div>
         </nav>
       </header>

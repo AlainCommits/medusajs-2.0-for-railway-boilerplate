@@ -25,6 +25,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "backend-production-a9b8.up.railway.app",
       },
+      {
+        protocol: "https",
+        hostname: "img.freepik.com",
+      },
     ],
   },
   serverRuntimeConfig: {

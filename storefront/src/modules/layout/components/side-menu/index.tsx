@@ -8,6 +8,7 @@ import { Fragment } from "react"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CountrySelect from "../country-select"
 import { HttpTypes } from "@medusajs/types"
+import { CgMenuGridR } from "react-icons/cg";
 
 const SideMenuItems = {
   Home: "/",
@@ -29,9 +30,9 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
               <div className="relative flex h-full">
                 <Popover.Button
                   data-testid="nav-menu-button"
-                  className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base gradient-text-1  font-bold"
+                  className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base font-bold"
                 >
-                  Menu
+                  <CgMenuGridR  className="gradient-text-2 text-2xl"/>
                 </Popover.Button>
               </div>
 
@@ -50,8 +51,8 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                     data-testid="nav-menu-popup"
                     className="flex flex-col h-full bg-gradient-linear from-purple-800 primary-foreground to-secondary rounded-rounded justify-between p-6  rounded-2xl"
                   >
-                    <div className="flex justify-end" id="xmark">
-                      <button data-testid="close-menu-button" onClick={close}>
+                    <div className="flex justify-start" id="xmark">
+                      <button data-testid="close-menu-button text-primary/10" onClick={close}>
                         <XMark />
                       </button>
                     </div>
@@ -61,7 +62,7 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                           <li key={name}>
                             <LocalizedClientLink
                               href={href}
-                              className="text-3xl leading-10 hover:text-ui-fg-disabled"
+                              className="text-3xl leading-10 hover:text-ui-fg-disabled " 
                               onClick={close}
                               data-testid={`${name.toLowerCase()}-link`}
                             >

@@ -1,11 +1,15 @@
+'use client'
+
 import { WobbleCard } from "@/components/ui/wobble-card";
 import { Github } from "@medusajs/icons";
 import { Button, Heading } from "@medusajs/ui";
 import Image from 'next/image';
 
+
+
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-r from-background to-secondary flex items-center py-12 lg:py-20">
+    <section className="min-h-screen bg-gradient-to-br from-background to-secondary flex items-center py-12 lg:py-20 relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
           {/* Left column with text */}
@@ -19,56 +23,60 @@ const Hero = () => {
             
             <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-50">
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,hsl(var(--primary))_0%,hsl(var(--accent-foreground))_50%,hsl(var(--primary))_100%)]" />
-              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-6 py-2 text-base font-medium text-gradient-1 backdrop-blur-3xl">
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-6 py-2 text-base font-medium text-primary-foreground backdrop-blur-3xl">
                 Zum Shop
               </span>
             </button>
           </div>
 
           {/* Right column with asymmetric grid */}
-          <div className="w-full lg:w-1/2">
-            <div className="grid grid-cols-6 grid-rows-6 gap-3 md:gap-4 h-[400px] md:h-[500px] lg:h-[600px]">
-              <div className="col-span-4 row-span-4 relative overflow-hidden shadow-lg bg-background rounded-2xl md:rounded-3xl">
-                <Image
-                  src="/bild1.png"
-                  alt="Large landscape"
-                  layout="fill"
-                  objectFit="cover"
-                />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+            <WobbleCard
+              containerClassName="col-span-1 lg:col-span-2 h-full bg-primary/10 min-h-[500px] lg:min-h-[300px]"
+              className=""
+            >
+              <div className="max-w-xs">
+                <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] gradient-text-2">
+                Premium Cannabis Seeds and Clones
+                </h2>
+                <p className="mt-4 text-left  text-base/6 text-neutral-400">
+                Cultivate the finest cannabis strains with our carefully selected seeds and healthy clones. Enjoy high-quality genetics and expert support.
+                </p>
               </div>
-              <div className="col-span-2 row-span-2 relative overflow-hidden shadow-lg bg-background rounded-xl md:rounded-2xl">
-                <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="Small square 1"
-                  layout="fill"
-                  objectFit="cover"
-                />
+              <Image
+                src={'/images/bild1.png'}
+                width={500}
+                height={500}
+                alt="linear demo image"
+                className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl z-50 "
+                unoptimized
+              />
+            </WobbleCard>
+            <WobbleCard containerClassName="col-span-1 min-h-[300px]">
+              <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] gradient-text-3 drop-shadow-2xl">
+              Essential Grow Supplies
+              </h2>
+              <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-400">
+              Find everything you need for a successful grow, from nutrient solutions and lighting to pots and grow tents. Shop our curated collection of essentials.
+              </p>
+            </WobbleCard>
+            <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-primary-foreground/40 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+              <div className="max-w-sm">
+                <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] gradient-text-4">
+                Join Our Community
+                </h2>
+                <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-400">
+                Connect with fellow growers, share tips, and learn from experts. Become part of our thriving community and stay up-to-date on the latest cannabis trends.
+                </p>
               </div>
-              <div className="col-span-2 row-span-2 relative overflow-hidden shadow-lg bg-background rounded-xl md:rounded-2xl">
-                <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="Small square 2"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-              <div className="col-span-3 row-span-2 relative overflow-hidden shadow-lg bg-background rounded-xl md:rounded-2xl">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Wide rectangle"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-              <div className="col-span-3 row-span-2 relative overflow-hidden shadow-lg bg-background rounded-xl md:rounded-2xl">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Wide rectangle 2"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-            </div>
+              <Image
+                src="/images/noise.webp"
+                width={500}
+                height={500}
+                alt="linear demo image"
+                className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
+              />
+            </WobbleCard>
           </div>
         </div>
       </div>

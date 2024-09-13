@@ -7,8 +7,14 @@ loadEnv(process.env.NODE_ENV, process.cwd());
 const backendUrl = process.env.RAILWAY_PUBLIC_DOMAIN_VALUE || 'http://localhost:9000';
 
 const plugins = [
-  // 'medusa-fulfillment-manual'
-];
+  // ...
+  {
+    resolve: `@medusajs/file-local`,
+    options: {
+      backend_url: `${backendUrl}/static`
+    },
+  },
+]
 
 const modules = {
   [Modules.FILE]: {
