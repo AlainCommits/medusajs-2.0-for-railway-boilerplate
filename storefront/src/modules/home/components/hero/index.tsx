@@ -4,7 +4,9 @@ import { WobbleCard } from "@/components/ui/wobble-card";
 import { Github } from "@medusajs/icons";
 import { Button, Heading } from "@medusajs/ui";
 import Image from 'next/image';
-
+import myImage from '../../../../../public/images/bild4.png';
+import rb1 from '../../../../../public/images/rb1.png';
+import grow from '../../../../../public/images/rainbow2.jpg';
 
 
 const Hero = () => {
@@ -44,12 +46,12 @@ const Hero = () => {
                 </p>
               </div>
               <Image
-                src={'/images/bild1.png'}
-                width={500}
-                height={500}
+                src={rb1}
+                width={250}	
+                height={250}
+               
                 alt="linear demo image"
-                className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl z-50 "
-                unoptimized
+                className="absolute -right-10 md:-right-[40%] lg:-right-[10%] -bottom-10 object-contain rounded-2xl"
               />
             </WobbleCard>
             <WobbleCard containerClassName="col-span-1 min-h-[300px]">
@@ -69,12 +71,14 @@ const Hero = () => {
                 Connect with fellow growers, share tips, and learn from experts. Become part of our thriving community and stay up-to-date on the latest cannabis trends.
                 </p>
               </div>
+             
               <Image
-                src="/images/noise.webp"
+                src={grow}
                 width={500}
                 height={500}
                 alt="linear demo image"
-                className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
+                className="absolute -right-4 lg:-right-[20%]  -bottom-5 object-contain rounded-2xl z-50 "
+                unoptimized
               />
             </WobbleCard>
           </div>
