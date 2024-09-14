@@ -29,7 +29,6 @@
     "@medusajs/currency": "preview",
     "@medusajs/customer": "preview",
     "@medusajs/event-bus-local": "preview",
-    "@medusajs/event-bus-redis": "preview",
     "@medusajs/file": "preview",
     "@medusajs/file-local-next": "preview",
     "@medusajs/fulfillment": "preview",
@@ -38,6 +37,7 @@
     "@medusajs/medusa": "preview",
     "@medusajs/notification": "preview",
     "@medusajs/notification-local": "preview",
+    "@medusajs/event-bus-redis": "preview",
     "@medusajs/notification-sendgrid": "preview",
     "@medusajs/order": "preview",
     "@medusajs/payment": "preview",
@@ -52,7 +52,6 @@
     "@medusajs/tax": "preview",
     "@medusajs/user": "preview",
     "@medusajs/workflow-engine-inmemory": "preview",
-    "cloudinary": "^2.4.0",
     "express": "^4.17.2"
   },
   "devDependencies": {
